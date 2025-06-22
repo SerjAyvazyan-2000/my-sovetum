@@ -1,0 +1,12 @@
+<svg width="68" height="68" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g fill="white" opacity="0.6">
+  <!-- Основной чат -->
+  <rect x="12" y="16" width="44" height="28" rx="6" fill="white"/>
+  <circle cx="22" cy="26" r="2"/>
+  <circle cx="34" cy="26" r="2"/>
+  <circle cx="46" cy="26" r="2"/>
+  
+  <!-- Хвостик чата -->
+  <path d="M30 44 L38 36 L22 36 Z" fill="white"/>
+</g>
+</svg> 

@@ -1,0 +1,14 @@
+<svg width="203" height="203" viewBox="0 0 203 203" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g fill="white">
+  <!-- Голова -->
+  <circle cx="101.5" cy="70" r="35" />
+  
+  <!-- Тело -->
+  <ellipse cx="101.5" cy="150" rx="55" ry="30" />
+  
+  <!-- Детали лица -->
+  <circle cx="90" cy="65" r="4" fill="#150628"/>
+  <circle cx="113" cy="65" r="4" fill="#150628"/>
+  <ellipse cx="101.5" cy="80" rx="8" ry="4" fill="#150628"/>
+</g>
+</svg> 

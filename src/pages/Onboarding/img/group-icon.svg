@@ -1,0 +1,15 @@
+<svg width="216" height="216" viewBox="0 0 216 216" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g fill="white">
+  <!-- Центральная фигура -->
+  <circle cx="108" cy="85" r="25" />
+  <ellipse cx="108" cy="140" rx="35" ry="20" />
+  
+  <!-- Левая фигура -->
+  <circle cx="60" cy="90" r="20" />
+  <ellipse cx="60" cy="135" rx="28" ry="16" />
+  
+  <!-- Правая фигура -->
+  <circle cx="156" cy="90" r="20" />
+  <ellipse cx="156" cy="135" rx="28" ry="16" />
+</g>
+</svg> 

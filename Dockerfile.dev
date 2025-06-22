@@ -1,0 +1,26 @@
+FROM node:20-alpine
+
+# Создание рабочей директории
+WORKDIR /app
+
+# Копирование package.json и package-lock.json
+COPY package*.json ./
+
+# Установка зависимостей
+RUN npm ci
+
+# Установка figma-developer-mcp глобально
+RUN npm install -g figma-developer-mcp
+
+# Копирование остального кода
+COPY . .
+
+# Копируем startup скрипт и делаем его исполняемым
+COPY start-services.sh /app/start-services.sh
+RUN chmod +x /app/start-services.sh
+
+# Экспозиция портов
+EXPOSE 3000 3333
+
+# Команда запуска через startup скрипт
+CMD ["sh", "/app/start-services.sh"] 

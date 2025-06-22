@@ -1,0 +1,1 @@
+import { create } from "zustand"; interface OnboardingState { step: number; setStep: (step: number) => void; } export const useOnboardingStore = create<OnboardingState>()((set) => ({ step: 1, setStep: (step) => set({ step }), }));

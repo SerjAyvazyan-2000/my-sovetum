@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+.icon {
+    display: inline-block;
+    height: 1em;
+    width: 1em;
+    mask-size: contain;
+    -webkit-mask-size: contain;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-position: center;
+}
+.icon-plus{
+    mask-image: url(plus.svg);
+    -webkit-mask-image: url(plus.svg);
+}
+.icon-business{
+    mask-image: url(business.svg);
+    -webkit-mask-image: url(business.svg);
+}
+.icon-earth{
+    mask-image: url(earth.svg);
+    -webkit-mask-image: url(earth.svg);
+}
