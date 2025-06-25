@@ -12,12 +12,13 @@ import Loading from '../components/common/Loading'
  * Интерфейс для данных пользователя
  */
 interface User {
-  id?: number
+  id: number
   first_name?: string
   last_name?: string
   username?: string
   language_code?: string
   is_premium?: boolean
+
 }
 
 /**
@@ -227,8 +228,8 @@ const ProfilePage: React.FC = () => {
                 color: '#ffffff'
               }}
             >
-              {user.first_name.charAt(0).toUpperCase()}
-              {user.last_name?.charAt(0).toUpperCase() || ''}
+              {user?.first_name?.charAt(0).toUpperCase()}
+              {user?.last_name?.charAt(0).toUpperCase() || ''}
             </div>
             
             {/* Информация */}

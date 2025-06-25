@@ -39,7 +39,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
    * Статический метод для обновления состояния при ошибке
    * @param error - объект ошибки
    */
-  static override getDerivedStateFromError(error: Error): ErrorBoundaryState {
+  static  getDerivedStateFromError(error: Error): ErrorBoundaryState {
     console.error('🚨 ErrorBoundary перехватил ошибку:', error)
     
     return {
@@ -60,9 +60,12 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
       componentStack: errorInfo.componentStack
     })
     
+    // this.setState({
+    //   error,
+    //   errorInfo
+    // })
     this.setState({
-      error,
-      errorInfo
+      hasError: false
     })
     
     // Отправляем ошибку в систему логирования (если нужно)
