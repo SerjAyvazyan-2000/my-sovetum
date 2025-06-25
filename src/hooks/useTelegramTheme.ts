@@ -116,6 +116,7 @@ export const useTelegramTheme = () => {
         button_text_color: '#ffffff',
         secondary_bg_color: '#f1f1f1'
       })
+      return undefined
     }
   }, [])
 }

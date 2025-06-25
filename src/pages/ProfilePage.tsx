@@ -12,8 +12,8 @@ import Loading from '../components/common/Loading'
  * Интерфейс для данных пользователя
  */
 interface User {
-  id: number
-  first_name: string
+  id?: number
+  first_name?: string
   last_name?: string
   username?: string
   language_code?: string

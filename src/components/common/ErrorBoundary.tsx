@@ -19,7 +19,7 @@ interface ErrorBoundaryProps {
 interface ErrorBoundaryState {
   hasError: boolean
   error?: Error
-  errorInfo?: React.ErrorInfo
+  errorInfo?: React.ErrorInfo;
 }
 
 /**
@@ -39,7 +39,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
    * Статический метод для обновления состояния при ошибке
    * @param error - объект ошибки
    */
-  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
+  static override getDerivedStateFromError(error: Error): ErrorBoundaryState {
     console.error('🚨 ErrorBoundary перехватил ошибку:', error)
     
     return {
@@ -53,7 +53,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
    * @param error - объект ошибки
    * @param errorInfo - дополнительная информация об ошибке
    */
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+  override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     console.error('🚨 Детали ошибки:', {
       error,
       errorInfo,
@@ -101,7 +101,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
     window.location.reload()
   }
 
-  render() {
+  override  render() {
     if (this.state.hasError) {
       // Если передан кастомный fallback, используем его
       if (this.props.fallback) {

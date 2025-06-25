@@ -9,12 +9,12 @@
 import { useState, useEffect, useCallback, useRef } from 'react'
 
 // Типы для Context7 интеграции
-interface Context7Response<T = any> {
-  data: T
-  success: boolean
-  error?: string
-  timestamp: number
-}
+// interface Context7Response<T = any> {
+//   data: T
+//   success: boolean
+//   error?: string
+//   timestamp: number
+// }
 
 interface Context7Options {
   libraryId: string
@@ -48,7 +48,7 @@ export function useContext7<T = any>(options: Context7Options): UseContext7Resul
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   
-  const { libraryId, topic, tokens = 5000, cacheTime = 5 * 60 * 1000 } = options
+  // const { libraryId, topic, tokens = 5000, cacheTime = 5 * 60 * 1000 } = options
   const optionsRef = useRef(options)
   
   // Обновляем ref при изменении опций
@@ -91,7 +91,7 @@ export function useContext7<T = any>(options: Context7Options): UseContext7Resul
       
       // Здесь будет реальный API вызов к Context7
       // Пока используем заглушку с реалистичными данными
-      const mockResponse = await fetchMockContext7Data(opts)
+      const mockResponse = await fetchMockContext7Data(opts) as T
       
       // Кэшируем результат
       context7Cache.set(cacheKey, {
@@ -102,7 +102,7 @@ export function useContext7<T = any>(options: Context7Options): UseContext7Resul
       
       console.log('✅ Context7: Данные успешно загружены и закэшированы')
       return mockResponse
-      
+
     } catch (err: any) {
       console.error('❌ Context7: Ошибка загрузки данных:', err)
       throw new Error(err.message || 'Не удалось загрузить данные из Context7')

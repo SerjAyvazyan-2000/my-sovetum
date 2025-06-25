@@ -5,7 +5,7 @@
 
 import React, { useState, useEffect, useRef } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import { backButton, mainButton, useSignal } from '@telegram-apps/sdk-react'
+import { backButton, mainButton } from '@telegram-apps/sdk-react'
 import Loading from '../components/common/Loading'
 import { expertService, type Expert, type SendMessageRequest } from '../services/expertService'
 
@@ -501,7 +501,8 @@ const ChatPage: React.FC = () => {
       // Проверяем и скрываем главную кнопку
       if (mainButton && mainButton.isVisible && mainButton.isVisible()) {
         try {
-          mainButton.hide()
+          // mainButton.hide()
+          window.Telegram?.WebApp?.MainButton?.hide();
         } catch (error) {
           console.warn('⚠️ Не удалось скрыть главную кнопку:', error)
         }
@@ -664,20 +665,20 @@ const ChatPage: React.FC = () => {
           )}
           
           {/* Индикатор восстановленного разговора */}
-          {messages.length > 0 && messages[0].metadata?.restoration_method && (
+          {messages.length > 0 && messages[0]?.metadata?.restoration_method && (
             <div 
               className="text-xs px-2 py-1 rounded flex items-center space-x-1"
               style={{ 
-                backgroundColor: messages[0].metadata.restoration_method === 'server' 
+                backgroundColor: messages[0]?.metadata.restoration_method === 'server'
                   ? 'rgba(34, 197, 94, 0.2)' 
                   : 'rgba(59, 130, 246, 0.2)',
-                color: messages[0].metadata.restoration_method === 'server' 
+                color: messages[0]?.metadata.restoration_method === 'server'
                   ? 'var(--tg-theme-link-color, #22c55e)' 
                   : 'var(--tg-theme-link-color, #3b82f6)'
               }}
-              title={`Разговор восстановлен методом: ${messages[0].metadata.restoration_method}`}
+              title={`Разговор восстановлен методом: ${messages[0]?.metadata.restoration_method}`}
             >
-              {messages[0].metadata.restoration_method === 'server' ? (
+              {messages[0]?.metadata.restoration_method === 'server' ? (
                 <>
                   <span>☁️</span>
                   <span>Синхронизирован</span>

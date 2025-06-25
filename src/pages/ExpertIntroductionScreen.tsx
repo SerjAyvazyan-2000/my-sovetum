@@ -4,7 +4,7 @@
  * Карусель с экспертами для выбора первого
  */
 
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 
 /**
