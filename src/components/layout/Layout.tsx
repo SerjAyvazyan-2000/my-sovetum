@@ -31,14 +31,18 @@ const Layout: React.FC<LayoutProps> = ({
     <div 
       className={`
         min-h-screen 
-        bg-white dark:bg-gray-900
+        dark:bg-gray-900
+        
         text-gray-900 dark:text-white
         safe-area-padding
         ${className}
       `}
       style={{
-        backgroundColor: 'var(--tg-theme-bg-color, #ffffff)',
+        backgroundColor: '#f8f8f8',
         color: 'var(--tg-theme-text-color, #000000)'
+
+          // backgroundColor: 'var(--tg-theme-bg-color, #ffffff)',
+
       }}
     >
       {/* Основной контент */}

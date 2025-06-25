@@ -37,6 +37,13 @@ import './styles/globals.css'
 import AcquaintanceScreen from "@pages/Onboarding/AcquaintanceScreen.tsx";
 import WelcomeScreen from './pages/WelcomeScreen'
 import ConsultationsScreen from "@pages/Onboarding/ConsultationsScreen.tsx";
+import Home from "@pages/Onboarding/Home.tsx";
+import CreateExpert from "@pages/Onboarding/CreateExpert.tsx";
+import CreateExpertStep1 from "@pages/Onboarding/CreateExpertStep1.tsx";
+import CreateExpertStep2 from './pages/Onboarding/CreateExpertStep2'
+import CreateExpertStep3 from './pages/Onboarding/CreateExpertStep3'
+import CreateExpertStep4 from './pages/Onboarding/CreateExpertStep4'
+import Settings from "@pages/Onboarding/Settings.tsx";
 
 /**
  * Основной компонент приложения
@@ -108,7 +115,7 @@ function App() {
   // Если еще инициализируемся, показываем загрузку
   if (!isReady || isFirstVisit === null) {
     return (
-      <div className="min-h-screen bg-gray-100 dark:bg-gray-900 flex items-center justify-center">
+      <div className="min-h-screen  bg-gray-100 dark:bg-gray-900 flex items-center justify-center">
         <Loading text="Инициализация приложения..." />
       </div>
     )
@@ -133,6 +140,13 @@ function App() {
             <Route path="/onboarding/acquaintance" element={<AcquaintanceScreen />} />
             <Route path="/onboarding/interest" element={<InterestScreen />} />
             <Route path="/onboarding/consultation" element={<ConsultationsScreen />} />
+            <Route path="/onboarding/home" element={<Home />} />
+            <Route path="/onboarding/createExpert" element={<CreateExpert />} />
+            <Route path="/onboarding/createExpertStep1" element={<CreateExpertStep1 />} />
+            <Route path="/onboarding/createExpertStep2" element={<CreateExpertStep2 />} />
+            <Route path="/onboarding/createExpertStep3" element={<CreateExpertStep3 />} />
+            <Route path="/onboarding/createExpertStep4" element={<CreateExpertStep4 />} />
+            <Route path="/onboarding/settings" element={<Settings />} />
 
 
 

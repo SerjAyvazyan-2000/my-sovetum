@@ -23,3 +23,120 @@
     mask-image: url(earth.svg);
     -webkit-mask-image: url(earth.svg);
 }
+.icon-notification{
+    mask-image: url(notification.svg);
+    -webkit-mask-image: url(notification.svg);
+}
+.icon-calendar{
+    mask-image: url(calendar.svg);
+    -webkit-mask-image: url(calendar.svg);
+}
+.icon-cashFill{
+    mask-image: url(cashFill.svg);
+    -webkit-mask-image: url(cashFill.svg);
+}
+.icon-checks_line{
+    mask-image: url(checks_line.svg);
+    -webkit-mask-image: url(checks_line.svg);
+}
+.icon-star{
+    mask-image: url(star.svg);
+    -webkit-mask-image: url(star.svg);
+}
+.icon-home{
+    mask-image: url(home.svg);
+    -webkit-mask-image: url(home.svg);
+}
+.icon-users{
+    mask-image: url(users.svg);
+    -webkit-mask-image: url(users.svg);
+}
+.chart_decrease{
+    mask-image: url(chart_decrease.svg);
+    -webkit-mask-image: url(chart_decrease.svg);
+}
+.icon-user{
+    mask-image: url(user.svg);
+    -webkit-mask-image: url(user.svg);
+}
+.icon-arrow{
+    mask-image: url(arrow.svg);
+    -webkit-mask-image: url(arrow.svg);
+}
+.icon-photo_album{
+    mask-image: url(photo_album.svg);
+    -webkit-mask-image: url(photo_album.svg);
+}
+.icon-ai_fill{
+    mask-image: url(ai_fill.svg);
+    -webkit-mask-image: url(ai_fill.svg);
+}
+.icon-target_fill{
+    mask-image: url(target_fill.svg);
+    -webkit-mask-image: url(target_fill.svg);
+}
+.icon-search_fill{
+    mask-image: url(search_fill.svg);
+    -webkit-mask-image: url(search_fill.svg);
+}
+.icon-heart_hand_fill{
+    mask-image: url(heart_hand_fill.svg);
+    -webkit-mask-image: url(heart_hand_fill.svg);
+}
+.icon-palette_fill{
+    mask-image: url(palette_fill.svg);
+    -webkit-mask-image: url(palette_fill.svg);
+}
+.icon-pdf_fill{
+    mask-image: url(pdf_fill.svg);
+    -webkit-mask-image: url(pdf_fill.svg);
+}
+.icon-close{
+    mask-image: url(close.svg);
+    -webkit-mask-image: url(close.svg);
+}
+.icon-doc_fill{
+    mask-image: url(doc_fill.svg);
+    -webkit-mask-image: url(doc_fill.svg);
+}
+.icon-document-fill{
+    mask-image: url(document_2_fill.svg);
+    -webkit-mask-image: url(document_2_fill.svg);
+}
+.icon-W{
+    mask-image: url(w.svg);
+    -webkit-mask-image: url(w.svg);
+}
+.icon-file_fill{
+    mask-image: url(file_fill.svg);
+    -webkit-mask-image: url(file_fill.svg);
+}
+.icon-earth_2_fill{
+    mask-image: url(earth_2_fill.svg);
+    -webkit-mask-image: url(earth_2_fill.svg);
+}
+.icon-send_fill{
+    mask-image: url(send.svg);
+    -webkit-mask-image: url(send.svg);
+
+}
+.icon-pencil_2_fill{
+    mask-image: url(pencil_2_fill.svg);
+    -webkit-mask-image: url(pencil_2_fill.svg);
+}
+.icon-bell_ringing_fill{
+    mask-image: url(bell_ringing_fill.svg);
+    -webkit-mask-image: url(bell_ringing_fill.svg);
+}
+.icon-message_2_fill{
+    mask-image: url(message_2_fill.svg);
+    -webkit-mask-image: url(message_2_fill.svg);
+}
+.icon-question_fill{
+    mask-image: url(question_fill.svg);
+    -webkit-mask-image: url(question_fill.svg);
+}
+.icon-profile_fill{
+    mask-image: url(profile_fill.svg);
+    -webkit-mask-image: url(profile_fill.svg);
+}

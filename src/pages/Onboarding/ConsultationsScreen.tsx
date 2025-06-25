@@ -117,7 +117,7 @@ const AcquaintanceScreen: React.FC = () => {
 
 
             <div className='relative z-[2] white-link-blur'>
-                <WhiteLink className='text-[14px] absolute bottom-[26px] left-[16px] w-[92%] ' hrefTo={'/onboarding/welcome'}>
+                <WhiteLink  className='text-[14px] absolute bottom-[26px] left-[16px] w-[92%] ' hrefTo={'/onboarding/home'}>
                     Начать использование
                     <img src={arrowRight} alt="arrow" className="w-[16px] h-[16px]"/>
                 </WhiteLink>
@@ -137,7 +137,7 @@ const AcquaintanceScreen: React.FC = () => {
             </div>
 
 
-            <div className='absolute w-full h-full top-[0] left-[0] z-[-1]'>
+            <div className='absolute  w-full h-full top-[0] left-[0] z-[-1]'>
                 <img src={acquaintanceBg} alt=""/>
             </div>
         </div>

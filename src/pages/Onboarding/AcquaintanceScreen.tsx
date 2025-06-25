@@ -112,7 +112,7 @@ const AcquaintanceScreen: React.FC = () => {
 
 
             <button
-                className="mt-[30px] h-[50px] w-full flex items-center justify-center gap-[11px]
+                className="mt-[30px]    h-[50px] w-full flex items-center justify-center gap-[11px]
              px-[20px] py-[11px] border border-[#B397D9] rounded-[64px]
              bg-[#160729] text-[#B397D9] text-[14px] font-ibm font-medium
              leading-[100%] tracking-[1px] uppercase text-center cursor-pointer

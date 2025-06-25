@@ -1,0 +1,3 @@
+npx figma-developer-mcp --figma-api-key=figd_F12gNPSkaznV_C_H7WSaMe4F2Hr3rjPdSOxsXoyE
+
+// Если папки assets/onboarding2 нет, создайте её вручную для хранения ассетов онбординга (фон, эллипсы и т.д.)

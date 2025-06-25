@@ -23,7 +23,7 @@ export const InterestScreen: React.FC = () => {
     ];
 
     return <>
-        <div className="relative z-2 min-h-[724px] w-full bg-[#1E112E]  overflow-hidden flex flex-col align-items-center">
+        <div className="relative z-2 min-h-[724px] pb-[50px] w-full bg-[#1E112E]  overflow-hidden flex flex-col align-items-center">
 
 
             <div className="py-[19px] px-[16px]">
