@@ -41,7 +41,7 @@ const Home: FC = () => {
 
         {/*Категории*/}
 
-        <div className='mt-[24px] pl-[16px]  no-scrollbarnpm  overflow-x-auto overflow-y-hidden'>
+        <div className='mt-[24px] pl-[16px]  no-scrollbar   overflow-x-auto overflow-y-hidden'>
             <div className='flex gap-[8px] min-w-max w-fit'>
                 <Link to={'/onboarding/createExpert'}
                     className='w-[44px] min-w-[44px] h-[44px] cursor-pointer bg-[#FFFFFF] rounded-full border flex justify-center items-center border-[#A281CD52]'>
