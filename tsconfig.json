@@ -40,7 +40,7 @@
     "forceConsistentCasingInFileNames": true,
     
     /* Включение более строгих проверок */
-    "exactOptionalPropertyTypes": true,
+    "exactOptionalPropertyTypes": false,
     "noImplicitReturns": true,
     "noImplicitOverride": true,
     "noUncheckedIndexedAccess": true

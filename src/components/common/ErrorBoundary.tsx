@@ -90,10 +90,13 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
    * Обработчик кнопки "Попробовать снова"
    */
   handleRetry = () => {
+    // this.setState({
+    //   hasError: false,
+    //   error: undefined,
+    //   errorInfo: undefined
+    // })
     this.setState({
-      hasError: false,
-      error: undefined,
-      errorInfo: undefined
+      hasError: false
     })
   }
 
