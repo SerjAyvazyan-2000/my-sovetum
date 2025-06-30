@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
 import avatar2 from "../../pages/Onboarding/img/avatar2.png";
 import BigText from "@components/shared/BigText.tsx";
-import {defaultExperts} from "@/data/expertCategories.ts";
-import {Link} from "react-router-dom"; // путь подставь под проект
+import {Link} from "react-router-dom";
 
 const experts = [
     {

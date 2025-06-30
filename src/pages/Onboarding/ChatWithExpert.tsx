@@ -6,10 +6,10 @@ import BigText from "@components/shared/BigText.tsx";
 import Tabs from "@/components/shared/Tabs";
 import chatImg from "@pages/Onboarding/img/chatImg.webp";
 import pageDecor2 from "@pages/Onboarding/img/pageDecor2.png";
-import SendButton from "@components/ui/SendButton.tsx";
 import {ScrollToTop} from "@components/shared/ScrollToTop.tsx";
 import {motion} from "framer-motion";
 import PopUpShare from "@components/shared/PopUpShare.tsx";
+import SendButton from "@/components/ui/SendButton";
 
 const ChatWithExpert: FC = () => {
 
