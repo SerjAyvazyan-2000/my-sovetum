@@ -2,8 +2,6 @@ import { motion } from 'framer-motion';
 import React from 'react'
 import {Link} from "react-router-dom";
 
-interface Props {
-}
 
 const Menu: React.FC<Props> = () => {
     return <motion.div  initial={{ opacity: 0, y: 30 }}
