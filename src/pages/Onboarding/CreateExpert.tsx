@@ -1,6 +1,5 @@
 import PageHeading from "@/components/shared/PageHeading";
 import {FC} from "react";
-import Menu from "@components/shared/Menu.tsx";
 import template from './img/template.png'
 import IndividualIcon from './img/IndividualIcon.png'
 
@@ -10,6 +9,7 @@ import SmallText from "@components/shared/SmallText.tsx";
 import {Link} from "react-router-dom";
 import { motion } from "framer-motion";
 import {ScrollToTop} from "@components/shared/ScrollToTop.tsx";
+import Menu from "@/components/shared/Menu";
 
 
 const Home: FC = () => {

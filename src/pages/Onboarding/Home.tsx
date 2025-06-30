@@ -7,12 +7,12 @@ import avatar from './img/avatar.png'
 
 import BlockTitle from "@components/shared/BlockTitle.tsx";
 
-import Menu from "@components/shared/Menu.tsx";
 import {Link} from "react-router-dom";
 import { motion } from "framer-motion";
 import MeetingList from "@/components/shared/MeetingList";
 import ExpertMessageList from "@/components/shared/ExpertMessageList";
 import {ScrollToTop} from "@components/shared/ScrollToTop.tsx";
+import Menu from "@/components/shared/Menu";
 
 const Home: FC = () => {
     return <div className='min-h-[725px] relative  overflow-hidden  bg-[linear-gradient(180deg,_rgba(89,57,131,0)_20%,_rgba(89,57,131,0.44)_200.84%)] pt-[24px]  pb-[20px]'>
