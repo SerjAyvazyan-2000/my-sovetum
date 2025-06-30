@@ -84,20 +84,223 @@
 }
 
 .blue-gradient {
-    background: radial-gradient(127.5% 127.5% at 50% 0%, #A281CD 0%, #593983 100%);
+    position: relative;
+    z-index: 2;
+    border: 1px solid transparent;
+    transition: .5s;
 
 }
+
+.blue-gradient::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(127.5% 127.5% at 50% 0%, #A281CD 0%, #593983 100%);
+    border-radius: 65px;
+    z-index: -1;
+    opacity: 1;
+    visibility: visible;
+    transition: .5s;
+
+}
+
+.blue-gradient:hover:after {
+    opacity: 0;
+    visibility: hidden;
+}
+.blue-gradient:hover {
+    border: 1px solid #A281CD52;
+    color: #593983;
+    background: #F5F5F8;
+
+}
+
+.blue-icon-gradient {
+    position: relative;
+    z-index: 2;
+    border: 1px solid transparent;
+    transition: .5s;
+
+}
+
+.blue-icon-gradient::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(127.5% 127.5% at 50% 0%, #A281CD 0%, #593983 100%);
+    border-radius: 65px;
+    z-index: -1;
+    opacity: 1;
+    visibility: visible;
+    transition: .5s;
+
+}
+
+.blue-icon-gradient:hover:after {
+    opacity: 0;
+    visibility: hidden;
+}
+.blue-icon-gradient:hover {
+    border: 1px solid #A281CD52;
+    background: #493E56;
+
+}
+
+
+
+.white-gradient {
+    position: relative;
+    z-index: 2;
+    border: 1px solid transparent;
+    transition: .5s;
+
+}
+
+.white-gradient::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #FFFFFF 0%, #A281CD 196.87%);
+    border-radius: 65px;
+    z-index: -1;
+    opacity: 1;
+    visibility: visible;
+    transition: .5s;
+
+}
+
+.white-gradient:hover:after {
+    opacity: 0;
+    visibility: hidden;
+}
+.white-gradient:hover {
+    border: 1px solid #A281CD52;
+    color: #F5F5F8;
+    background: #150628;
+}
+
+
+.border-hover {
+    position: relative;
+    z-index: 2;
+    border: 1px solid #A281CD52;
+    transition: .5s;
+
+}
+
+.border-hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, #493E56, #493E56);
+
+    border-radius: 65px;
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s;
+
+}
+
+.border-hover:hover:after {
+    opacity: 1;
+    visibility: visible;
+}
+.border-hover:hover i {
+    background: #FFFFFF;
+    color: #FFFFFF;
+}
+.border-hover:hover p{
+    color: #FFFFFF;
+}
+
+
+
+
+.rose-gradient {
+    position: relative;
+    z-index: 2;
+    border: 1px solid transparent;
+    transition: .5s;
+
+}
+
+.rose-gradient::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #FFFFFF 0%, #A281CD 196.87%);
+    border-radius: 65px;
+    z-index: -1;
+    opacity: 1;
+    visibility: visible;
+    transition: .5s;
+
+}
+
+.rose-gradient:hover:after {
+    opacity: 0;
+    visibility: hidden;
+}
+.rose-gradient:hover {
+    background: #A281CD;
+}
+
+.rose-gradient:hover i {
+    background: white;
+}
+
+
+
+
+
 
 .light-gradient {
     background: linear-gradient(180deg, #FFFFFF 0%, #A281CD 196.87%);
+}
+
+
+
+.custom-swiper-pagination .swiper-pagination-bullet {
+    background: #D9D9E2;
+    opacity: 1;
 
 }
+
+.custom-swiper-pagination .swiper-pagination-bullet-active {
+    background: #593983;
+
+}
+
+.custom-swiper-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    max-width: max-content;
+}
+
 
 @media (max-width: 430px) {
     .buttons-column {
         flex-direction: column;
     }
 }
+
 @media (max-width: 400px) {
     .text-desktop {
         display: none;
@@ -141,7 +344,6 @@ html, body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overscroll-behavior: none; /* Отключает перескролл в Telegram */
-    overflow-x: hidden; /* Отключает горизонтальный скролл */
     scroll-behavior: smooth; /* Плавный скролл */
 }
 
