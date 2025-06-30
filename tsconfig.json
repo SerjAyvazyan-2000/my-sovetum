@@ -34,7 +34,6 @@
       "@store/*": ["src/store/*"]
     },
 
-    /* Дополнительные настройки для лучшего опыта разработки */
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
