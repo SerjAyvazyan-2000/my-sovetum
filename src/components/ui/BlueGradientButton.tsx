@@ -20,28 +20,27 @@ const BlueGradientButton: React.FC<BlueGradientButtonProps> = ({
                                                                    disabled = false
                                                                }) => {
     const baseClasses = clsx(className,
-        'blue-gradient w-full cursor-pointer rounded-full p-[14px] gap-[9px] flex items-center justify-center'
-
+        'blue-gradient w-full cursor-pointer rounded-full p-[14px] gap-[9px] flex items-center justify-center font-[Inter] font-normal leading-[100%] text-[14px] text-[#FFFFFF]'
 
     )
 
-    const content = (
-        <p className="font-[Inter] font-normal leading-[100%] text-[14px] text-[#FFFFFF]">
-            {children}
-        </p>
-    )
+    // const content = (
+    //     <p className="font-[Inter] font-normal leading-[100%] text-[14px] text-[#FFFFFF]">
+    //         {children}
+    //     </p>
+    // )
 
     if (href) {
         return (
             <Link to={href} className={baseClasses}>
-                {content}
+                {children}
             </Link>
         )
     }
 
     return (
         <button type={type} onClick={onClick} disabled={disabled} className={baseClasses}>
-            {content}
+            {children}
         </button>
     )
 }

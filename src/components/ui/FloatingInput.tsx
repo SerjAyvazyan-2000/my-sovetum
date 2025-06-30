@@ -11,6 +11,7 @@ interface FloatingInputProps {
 
     name?: string
     type?: string
+    icon?:string
 }
 
 const FloatingInput: React.FC<FloatingInputProps> = ({
@@ -21,7 +22,8 @@ const FloatingInput: React.FC<FloatingInputProps> = ({
                                                          className = '',
                                                          classNamPlaceholder,
                                                          name,
-                                                         type = 'text'
+                                                         type = 'text',
+                                                         icon
                                                      }) => {
     const [isFocused, setIsFocused] = useState(false)
 
@@ -47,13 +49,15 @@ const FloatingInput: React.FC<FloatingInputProps> = ({
 
             <label
                 className={clsx(classNamPlaceholder,
-                    'absolute left-6 text-[13px] text-[#D9D9E2] font-[Inter] font-normal  transition-all duration-200 pointer-events-none',
+                    'absolute left-6 text-[13px]  font-[Inter] font-normal  transition-all duration-200 pointer-events-none',
                     isActive ? 'top-[-22px] left-[0] ' : 'top-[12px]'
                 )}
             >
                 {label}
                 {required && '*'}
             </label>
+            {icon &&  <i className={`absolute right-[18px] top-[14px] icon  text-[16px] bg-[#9494A9] ${icon}`}></i>}
+
         </div>
     )
 }

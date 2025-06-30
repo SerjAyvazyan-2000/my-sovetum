@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 interface Props {
 }
 
-const PageHeading: React.FC<Props> = () => {
+const Menu: React.FC<Props> = () => {
     return <motion.div  initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, amount: 0.6 }}
@@ -39,4 +39,4 @@ const PageHeading: React.FC<Props> = () => {
     </motion.div>
 }
 
-export default PageHeading
+export default Menu
