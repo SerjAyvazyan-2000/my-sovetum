@@ -9,7 +9,7 @@ import SmallText from "@components/shared/SmallText.tsx";
 import {Link} from "react-router-dom";
 import { motion } from "framer-motion";
 import {ScrollToTop} from "@components/shared/ScrollToTop.tsx";
-import Menu from "@components/shared/Menu.tsx";
+import Menu from '@/components/shared/Menu'
 
 
 const Home: FC = () => {
