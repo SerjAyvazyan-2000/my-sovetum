@@ -140,3 +140,183 @@
     mask-image: url(profile_fill.svg);
     -webkit-mask-image: url(profile_fill.svg);
 }
+.icon-user-fill{
+    mask-image: url(userFill.svg);
+    -webkit-mask-image: url(userFill.svg);
+}
+.icon-setting{
+    mask-image: url(setting.svg);
+    -webkit-mask-image: url(setting.svg);
+}
+.icon-download{
+    mask-image: url(download.svg);
+    -webkit-mask-image: url(download.svg);
+}
+.icon-walletFill{
+    mask-image: url(walletFill.svg);
+    -webkit-mask-image: url(walletFill.svg);
+}
+.icon-layout_left_line{
+    mask-image: url(layout_left_line.svg);
+    -webkit-mask-image: url(layout_left_line.svg);
+}
+.icon-attachment_line{
+    mask-image: url(attachment_line.svg);
+    -webkit-mask-image: url(attachment_line.svg);
+}
+.icon-mic{
+    mask-image: url(mic.svg);
+    -webkit-mask-image: url(mic.svg);
+}
+.icon-inputLine{
+    mask-image: url(inputLine.svg);
+    -webkit-mask-image: url(inputLine.svg);
+}
+.icon-chart_bar_fill{
+    mask-image: url(chart_bar_fill.svg);
+    -webkit-mask-image: url(chart_bar_fill.svg);
+}
+.icon-comment_2_fill{
+    mask-image: url(comment_2_fill.svg);
+    -webkit-mask-image: url(comment_2_fill.svg);
+}
+.icon-alarm_2_fill{
+    mask-image: url(alarm_2_fill.svg);
+    -webkit-mask-image: url(alarm_2_fill.svg);
+}
+.icon-calendar_fill{
+    mask-image: url(calendar_fill.svg);
+    -webkit-mask-image: url(calendar_fill.svg);
+}
+.icon-document_fill{
+    mask-image: url(document_2_fill.svg);
+    -webkit-mask-image: url(document_2_fill.svg);
+
+}
+.icon-settings_3_fill{
+    mask-image: url(settings_3_fill.svg);
+    -webkit-mask-image: url(settings_3_fill.svg);
+}
+.icon-time_line{
+    mask-image: url(time_line.svg);
+    -webkit-mask-image: url(time_line.svg);
+}
+.icon-chart_bar{
+    mask-image: url(icon-chart_bar.svg);
+    -webkit-mask-image: url(icon-chart_bar.svg);
+
+
+}
+.icon-chart_pie_2_fill{
+    mask-image: url(chart_pie_2_fill.svg);
+    -webkit-mask-image: url(chart_pie_2_fill.svg);
+}
+.icon-warning_line{
+    mask-image: url(warning_line.svg);
+    -webkit-mask-image: url(warning_line.svg);
+}
+.icon-bling_fill{
+    mask-image: url(bling_fill.svg);
+    -webkit-mask-image: url(bling_fill.svg);
+}
+.icon-share_forward{
+    mask-image: url(share_forward.svg);
+    -webkit-mask-image: url(share_forward.svg);
+
+}
+.icon-refresh{
+    mask-image: url(refresh.svg);
+    -webkit-mask-image: url(refresh.svg);
+}
+.icon-flag{
+    mask-image: url(flag.svg);
+    -webkit-mask-image: url(flag.svg);
+}
+.icon-time_fill{
+    mask-image: url(time_fill.svg);
+    -webkit-mask-image: url(time_fill.svg);
+}
+.icon-close_fill{
+    mask-image: url(close_fill.svg);
+    -webkit-mask-image: url(close_fill.svg);
+}
+.icon-check_fill{
+    mask-image: url(check_fill.svg);
+    -webkit-mask-image: url(check_fill.svg);
+}
+.icon-fire_fill{
+    mask-image: url(fire_fill.svg);
+    -webkit-mask-image: url(fire_fill.svg);
+}
+.icon-list_check{
+    mask-image: url(list_check.svg);
+    -webkit-mask-image: url(list_check.svg);
+}
+.icon-A{
+    mask-image: url(A.svg);
+    -webkit-mask-image: url(A.svg);
+}
+.icon-information{
+    mask-image: url(information.svg);
+    -webkit-mask-image: url(information.svg);
+}
+.icon-search_line{
+    mask-image: url(search_line.svg);
+    -webkit-mask-image: url(search_line.svg);
+}
+.icon-group{
+    mask-image: url(group.svg);
+    -webkit-mask-image: url(group.svg);
+}
+.icon-classify{
+    mask-image: url(classify.svg);
+    -webkit-mask-image: url(classify.svg);
+}
+.icon-close_circle{
+    mask-image: url(close_circle.svg);
+    -webkit-mask-image: url(close_circle.svg);
+}
+.icon-chat{
+    mask-image: url(chat.svg);
+    -webkit-mask-image: url(chat.svg);
+}
+.icon-warning_fill{
+    mask-image: url(warning_fill.svg);
+    -webkit-mask-image: url(warning_fill.svg);
+}
+.icon-document_fill2{
+    mask-image: url(document_fill2.svg);
+    -webkit-mask-image: url(document_fill2.svg);
+}
+.icon-star_line{
+    mask-image: url(star_line.svg);
+    -webkit-mask-image: url(star_line.svg);
+}
+.icon-share_forward_line{
+    mask-image: url(share_forward_line.svg);
+    -webkit-mask-image: url(share_forward_line.svg);
+}
+.icon-alert_fill{
+    mask-image: url(alert_fill.svg);
+    -webkit-mask-image: url(alert_fill.svg);
+}
+.icon-check_2_fill{
+    mask-image: url(check_2_fill.svg);
+    -webkit-mask-image: url(check_2_fill.svg);
+}
+.icon-copy_2_line{
+    mask-image: url(copy_2_line.svg);
+    -webkit-mask-image: url(copy_2_line.svg);
+}
+.icon-edit_3_line{
+    mask-image: url(edit_3_line.svg);
+    -webkit-mask-image: url(edit_3_line.svg);
+}
+.icon-delete_3_line{
+    mask-image: url(delete_3_line.svg);
+    -webkit-mask-image: url(delete_3_line.svg);
+}
+.icon-arrow_right_line{
+    mask-image: url(arrow_right_line.svg);
+    -webkit-mask-image: url(arrow_right_line.svg);
+}

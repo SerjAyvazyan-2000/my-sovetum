@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 interface SegmentedSwitchProps {
-    title: string;
+    title?: string;
     options: string[];
     onChange?: (value: string) => void;
 }
@@ -15,14 +15,14 @@ export const SegmentedSwitch = ({ title, options, onChange }: SegmentedSwitchPro
     };
 
     return (
-        <div className="mt-[18px]">
+        <div>
             <p className="font-[Inter] text-[12px] font-normal leading-[100%]">{title}</p>
-            <div className="flex rounded-[64px] mt-[8px] items-center bg-[#E1D7EF]">
+            <div className="flex w-fit rounded-[64px] mt-[8px] items-center bg-[#E1D7EF] w-fit">
                 {options.map((option) => (
                     <button
                         key={option}
                         onClick={() => handleClick(option)}
-                        className={`py-[10px] px-[10px] sm:py-[7.5px] sm:px-[24px] flex-1/2 cursor-pointer rounded-[64px] text-[14px] leading-[100%] font-[Inter] font-normal border transition-all duration-300
+                        className={`py-[10px] px-[10px] sm:py-[7.5px] sm:px-[24px] flex-1/1 cursor-pointer rounded-[64px] text-[14px] leading-[100%] font-[Inter] font-normal border transition-all duration-300
               ${
                             active === option
                                 ? "bg-[#FFFFFF] border-[#A281CD52] text-[#593983]"

@@ -44,6 +44,19 @@ import CreateExpertStep2 from './pages/Onboarding/CreateExpertStep2'
 import CreateExpertStep3 from './pages/Onboarding/CreateExpertStep3'
 import CreateExpertStep4 from './pages/Onboarding/CreateExpertStep4'
 import Settings from "@pages/Onboarding/Settings.tsx";
+import MyExperts from './pages/Onboarding/MyExperts'
+import PremiumSub from "@pages/Onboarding/PremiumSub.tsx";
+import ChatWithExpert from '@pages/Onboarding/ChatWithExpert.tsx'
+import ExpertProfile from './pages/Onboarding/ExpertProfile'
+import Analytics from './pages/Onboarding/Analytics'
+import Progress from './pages/Onboarding/Progress'
+import ExpertMeetings from './pages/Onboarding/ExpertMeetings'
+import NewMeeting from './pages/Onboarding/NewMeeting'
+import NewMeetingStep2 from './pages/Onboarding/NewMeetingStep2'
+import NewMeetingStep3 from './pages/Onboarding/NewMeetingStep3'
+import ImproveFinancial from './pages/Onboarding/ImproveFinancial'
+import Meeting from './pages/Onboarding/Meeting'
+import ResultsMeeting from "@pages/Onboarding/ResultsMeeting.tsx";
 
 /**
  * Основной компонент приложения
@@ -52,11 +65,12 @@ import Settings from "@pages/Onboarding/Settings.tsx";
 function App() {
   // Применяем тему Telegram к приложению (работает и без Telegram)
   useTelegramTheme()
-  
+
+
   // Состояние для проверки первого запуска
   const [isFirstVisit, setIsFirstVisit] = React.useState<boolean | null>(null)
   const [isReady, setIsReady] = React.useState(false)
-  
+
   // Эффект для проверки первого запуска
   useEffect(() => {
     const checkFirstVisit = () => {
@@ -77,7 +91,12 @@ function App() {
     
     checkFirstVisit()
   }, [])
-  
+
+  useEffect(() => {
+    document.documentElement.style.scrollBehavior = 'auto';
+    window.scrollTo(0, 0);
+  }, [window.location.pathname]);
+
   // Эффект для инициализации приложения
   useEffect(() => {
     console.log('🎯 App компонент инициализирован')
@@ -120,6 +139,11 @@ function App() {
       </div>
     )
   }
+
+
+
+
+
   
   return (
     <ErrorBoundary>
@@ -147,6 +171,23 @@ function App() {
             <Route path="/onboarding/createExpertStep3" element={<CreateExpertStep3 />} />
             <Route path="/onboarding/createExpertStep4" element={<CreateExpertStep4 />} />
             <Route path="/onboarding/settings" element={<Settings />} />
+            <Route path="/onboarding/myExperts" element={<MyExperts />} />
+            <Route path="/onboarding/premiumSub" element={<PremiumSub />} />
+            <Route path="/onboarding/chatWithExpert" element={<ChatWithExpert />} />
+            <Route path="/onboarding/expertProfile" element={<ExpertProfile />} />
+            <Route path="/onboarding/analytics" element={<Analytics />} />
+
+            <Route path="/onboarding/progress" element={<Progress />} />
+            <Route path="/onboarding/expertMeetings" element={<ExpertMeetings />} />
+            <Route path="/onboarding/newMeeting" element={<NewMeeting />} />
+            <Route path="/onboarding/newMeetingStep2" element={<NewMeetingStep2 />} />
+            <Route path="/onboarding/newMeetingStep3" element={<NewMeetingStep3 />} />
+            <Route path="/onboarding/improveFinancial" element={<ImproveFinancial />} />
+            <Route path="/onboarding/meeting" element={<Meeting />} />
+            <Route path="/onboarding/resultsMeeting" element={<ResultsMeeting />} />
+
+
+
 
 
 

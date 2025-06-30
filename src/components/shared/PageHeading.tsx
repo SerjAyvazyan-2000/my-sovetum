@@ -18,7 +18,7 @@ const PageHeading: React.FC<PageHeadingProps> = ({
 
     if (subtitle) {
         content.push(
-            <p key="subtitle" className={`font-[Inter] font-normal text-[14px] leading-[140%] text-[#1E112E] ${classNameSubtitle}`}>
+            <p key="subtitle" className={`font-[Inter] font-normal text-[14px] leading-[140%] opacity-[.6] text-[#1E112E] ${classNameSubtitle}`}>
                 {subtitle}
             </p>
         )

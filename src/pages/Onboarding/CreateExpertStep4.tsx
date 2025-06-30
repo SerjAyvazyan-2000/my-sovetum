@@ -8,30 +8,40 @@ import BigText from "@components/shared/BigText.tsx";
 import BorderButton from "@components/ui/BorderButton.tsx";
 import BlueGradientButton from "@components/ui/BlueGradientButton.tsx";
 import FloatingInput from "@components/ui/FloatingInput.tsx";
+import SendButton from "@components/ui/SendButton.tsx";
+import { motion } from "framer-motion";
+import {ScrollToTop} from "@components/shared/ScrollToTop.tsx";
 
 
 const CreateExpertStep4: FC = () => {
 const [sms, setSms] = useState('')
     return <div
         className='min-h-[725px]   relative overflow-hidden bg-[linear-gradient(180deg,_rgba(89,57,131,0)_20%,_rgba(89,57,131,0.44)_200.84%)] pt-[24px]  '>
+        <ScrollToTop />
+
 
         <CreateExpertSteps/>
 
 
         {/*Заголовок*/}
-        <div className='flex items-center gap-[17px] mx-[16px]'>
+        <motion.div initial={{ opacity: 0, y: -30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 ,delay:.6 }} className='flex items-center gap-[17px] mx-[16px]'>
             <Link className='flex' to={'/onboarding/createExpertStep3'}>
-                <i className='icon icon-arrow bg-[#9494A9] cursor-pointer text-[18px] rotate-[180deg]'></i>
+                <i className='icon icon-arrow hover:bg-[#593983] transition duration-300 bg-[#9494A9] cursor-pointer text-[18px] rotate-[180deg]'></i>
 
             </Link>
             <PageHeading classNameSubtitle={'mt-[12px]'}
                          title="Финализация"/>
 
 
-        </div>
+        </motion.div>
 
 
-        <div className='mt-[35px] px-[16px]'>
+        <motion.div initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.2 }}
+                    transition={{ duration: 0.7 }} className='mt-[35px] px-[16px]'>
             <div className=' border border-[#F4F4F8]  mt-[16px] p-[16px] bg-[#FFFFFF] rounded-[20px]'>
                 <div className='border border-b-[#F4F4F8] pb-[24px] border-t-[transparent] border-l-[transparent] border-r-[transparent]'>
                     <div className='  pb-[14px]  flex items-center gap-[12px]'>
@@ -122,10 +132,13 @@ const [sms, setSms] = useState('')
                 </div>
 
             </div>
-        </div>
+        </motion.div>
 
 
-        <div className=' rounded-[20px] mx-[16px] mt-[16px] p-[16px] bg-[#FFFFFF]'>
+        <motion.div initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.2 }}
+                    transition={{ duration: 0.8 }} className=' rounded-[20px] mx-[16px] mt-[16px] p-[16px] bg-[#FFFFFF]'>
             <BigText title={'Дополнительные настройки'}/>
 
             <div className='mt-[14px] flex flex-col gap-[14px]'>
@@ -157,10 +170,13 @@ const [sms, setSms] = useState('')
 
 
 
-        </div>
+        </motion.div>
 
 
-        <div className=' rounded-[20px] mx-[16px] mt-[16px]  bg-[#FFFFFF]'>
+        <motion.div initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.2 }}
+                    transition={{ duration: 0.9 }} className=' rounded-[20px] mx-[16px] mt-[16px]  bg-[#FFFFFF]'>
             <div className='px-[16px] pt-[16px]'>
                 <BigText title={'Тестовый диалог'}/>
             </div>
@@ -186,32 +202,34 @@ const [sms, setSms] = useState('')
             <div className='bg-[#F5F5F8] p-[16px] rounded-bl-[20px] flex items-center gap-[8px] rounded-br-[20px]'>
                 <FloatingInput value={sms} onChange={(e)=>setSms(e.target.value)} label={'Сообщение'} classNamPlaceholder='text-[gray]'/>
 
-                <div className='h-[44px] min-w-[44px]  cursor-pointer w-[44px] rounded-full blue-gradient flex items-center justify-center'>
-                    <i className={'icon icon-send_fill text-[14px] bg-[#FFFFFF]'}></i>
-                </div>
+
+                <SendButton/>
             </div>
 
-        </div>
+        </motion.div>
 
 
 
 
 
-        <div className='flex buttons-column  rounded-tl-[16px] rounded-tr-[16px]    gap-[10px] border border-[#F4F4F8]   mt-[24px] px-[16px]  pt-[16px] pb-[20px] bg-[#FFFFFF] '>
+        <motion.div initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.2 }}
+                    transition={{ duration: 0.9 }} className='flex buttons-column  rounded-tl-[16px] rounded-tr-[16px]    gap-[10px] border border-[#F4F4F8]   mt-[24px] px-[16px]  pt-[16px] pb-[20px] bg-[#FFFFFF] '>
 
             <BorderButton
-                href={'/'}
-                as="button"
+                href={'/onboarding/settings'}
+                as="a"
                 className=' text-[#1E112E] h-[44px]'
             >
                 Изменить
 
             </BorderButton>
-            <BlueGradientButton href={'/onboarding/createExpertStep4'}>
+            <BlueGradientButton href={'/onboarding/createExpert'}>
                 Создать эксперта
             </BlueGradientButton>
 
-        </div>
+        </motion.div>
 
 
     </div>

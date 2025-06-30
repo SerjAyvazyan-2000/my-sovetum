@@ -7,16 +7,21 @@ import acquaintanceBg from './img/acquaintanceBg.webp';
 import acquaintanceSlideImg1 from './img/acquaintanceSlideImg1.webp';
 
 import {Swiper, SwiperSlide} from 'swiper/react';
-import arrowRightLight from "@pages/Onboarding/img/arrowRightLight.svg";
-import {Link} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
+import {motion} from "framer-motion";
+import {ScrollToTop} from "@components/shared/ScrollToTop.tsx";
 
 
 const AcquaintanceScreen: React.FC = () => {
+    const location = useLocation();
+
     const steps = [
         {path: '/onboarding/interest'},
         {path: '/onboarding/acquaintance'},
         {path: '/onboarding/consultation'}
     ];
+    const currentStepIndex = steps.findIndex((step) => step.path === location.pathname)
+
     const experts = [
         {
             name: 'Виктор',
@@ -39,23 +44,38 @@ const AcquaintanceScreen: React.FC = () => {
     ];
 
 
+    const stepsVariants = {
+        hidden: {opacity: 0, y: 20},
+        visible: {opacity: 1, y: 0, transition: {duration: 1, delay: 0.6}},
+    }
+
     return (
         <div className="relative z-2 min-h-[724px] w-full bg-[#1E112E] py-[19px] px-[16px]  overflow-hidden ">
+            <ScrollToTop />
 
 
-            <Link to='/onboarding/welcome'>
-                <img src={logoSmall} alt="Sovetum Logo"/>
-            </Link>
+
+            <motion.div initial={{opacity: 0, y: -100}}
+                        animate={{opacity: 1, y: 0}}
+                        transition={{duration: 1}}>
+                <Link to='/onboarding/welcome'>
+                    <img src={logoSmall} alt="Sovetum Logo"/>
+                </Link>
+            </motion.div>
 
 
-            <div className='mt-[29px]'>
-                <h2 className='text-[#fff] leading-[100%] text-[32px] font-medium'>Познакомьтесь с вашими
-                    экспертами</h2>
-                <span
+            <motion.div className='mt-[29px]'>
+                <motion.h2 initial={{ opacity: 0, y: 30 }}
+                           animate={{ opacity: 1, y: 0 }}
+                           transition={{ duration: 0.8 ,delay:.6 }} className='text-[#fff] leading-[100%] text-[32px] font-medium'>Познакомьтесь с вашими
+                    экспертами</motion.h2>
+                <motion.span initial={{ opacity: 0, y: 30 }}
+                             animate={{ opacity: 1, y: 0 }}
+                             transition={{ duration: 1,delay:.9 }}
                     className='max-w-[250px] block font-[Inter] font-normal text-[12px] leading-[140%] mt-[12px] text-[#FFFFFF9C]'>Каждый эксперт имеет уникальную
                      личность и специализацию
-                </span>
-            </div>
+                </motion.span>
+            </motion.div>
 
 
             <Swiper
@@ -72,7 +92,12 @@ const AcquaintanceScreen: React.FC = () => {
                 className=" mt-[24px]">
                 {experts.map((expert, index) => (
                     <SwiperSlide key={index}>
-                        <div className="border-[1px] border-[#A281CD52] rounded-[14px]">
+                        <motion.div   initial={{ opacity: 0, y: 30 }}
+                                      whileInView={{ opacity: 1, y: 0 }}
+                                      viewport={{ once: true }}
+                                      transition={{ duration: 1, delay: index * 0.1 }}
+                                      whileHover={{ scale: 1.02 }}
+                                      className="border-[1px] border-[#A281CD52] rounded-[14px]">
                             <img
                                 src={expert.image}
                                 alt={expert.name}
@@ -99,41 +124,53 @@ const AcquaintanceScreen: React.FC = () => {
                                 <button
                                     className="w-full  mt-[20px] px-[16px] py-[8px] font-inter text-[14px] font-normal
                leading-[100%] border border-[#A281CD52] bg-white text-[#160729]
-               rounded-full cursor-pointer transition-all duration-300 hover:bg-[#B397D9] hover:text-[#160729] hover:shadow-[0_0_15px_#B397D9]"
+               rounded-full cursor-pointer transition-all duration-300 hover:bg-[#B397D9] hover:text-[white] hover:shadow-[0_0_15px_#B397D9]"
                                 >
                                     Поговорить
                                 </button>
                             </div>
 
-                        </div>
+                        </motion.div>
                     </SwiperSlide>
                 ))}
             </Swiper>
 
 
-            <button
+            <motion.button initial={{ opacity: 0, scale: 0 }}
+                           animate={{ opacity: 1, scale: 1 }}
+                           transition={{duration: 0.7 }}
                 className="mt-[30px]    h-[50px] w-full flex items-center justify-center gap-[11px]
              px-[20px] py-[11px] border border-[#B397D9] rounded-[64px]
              bg-[#160729] text-[#B397D9] text-[14px] font-ibm font-medium
              leading-[100%] tracking-[1px] uppercase text-center cursor-pointer
-             transition-all duration-300 hover:bg-[#B397D9] hover:text-[#160729] hover:shadow-[0_0_15px_#B397D9]"
+             transition-all duration-100  hover:bg-[#B397D9] hover:text-[white] group hover:shadow-[0_0_15px_#B397D9]"
             >
                 <span>Пропустить знакомство</span>
-                <img src={arrowRightLight} alt="arrow" className="max-w-[17px]"/>
-            </button>
+                <i className='icon icon-arrow_right_line bg-[#B397D9] text-[17px] transition duration-300 group-hover:bg-[white]  group-hover:rotate-[-20deg]'></i>
+            </motion.button>
 
 
-            <div className="mt-[24px] flex gap-[4px] z-[1]">
-                {steps.map((step, index) => (
-                    <Link
-                        key={index}
-                        to={step.path}
-                        className={`flex-1 h-[6px] rounded-[10px] transition-all duration-200 ${
-                            location.pathname === step.path ? 'bg-[#A281CD]' : 'bg-[#F2EDF8]'
-                        }`}
-                    />
-                ))}
-            </div>
+            <motion.div      initial="hidden"
+                             animate="visible"
+                             variants={stepsVariants} className=''>
+
+                <div className="mt-[24px] flex gap-[4px] z-[1]">
+                    {steps.map((step, index) => (
+                        <Link
+                            key={index}
+                            to={step.path}
+                            className={`flex-1 h-[6px] rounded-[10px] hover:bg-[#A281CD]  transition-all duration-200 transition-all duration-200
+                             ${index <= currentStepIndex ? 'bg-[#A281CD]' : 'bg-[#F2EDF8]'}
+                            ${location.pathname === step.path ? 'bg-[#A281CD]' : ''}`}
+
+                        />
+                    ))}
+                </div>
+
+            </motion.div>
+
+
+
 
 
             <div className='absolute w-full h-full top-[0] left-[0] z-[-1]'>
